@@ -1,0 +1,35 @@
+{
+  "name": "studymate-plus",
+  "version": "1.0.0",
+  "description": "AI-Powered MERN Learning App with Quiz Generation, Course Management, and Personalized Scheduling",
+  "main": "server/server.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build",
+    "build:server": "cd server && npm run build",
+    "start": "cd server && npm start",
+    "install-deps": "npm install && cd server && npm install && cd ../client && npm install",
+    "ai:install": "cd server/ai_python && pip install -r requirements.txt",
+    "deploy:vercel": "vercel --prod",
+    "test": "cd server && npm test && cd ../client && npm test"
+  },
+  "keywords": [
+    "mern",
+    "ai",
+    "education",
+    "quiz",
+    "schedule",
+    "learning"
+  ],
+  "author": "StudyMate+ Team",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}
